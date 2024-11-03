@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloodworm Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pokedex-container">
+        <div class="ribbon">
+            <button onclick="showSection('summary')">Main Summary</button>
+            <button onclick="showSection('habitat')">Habitat</button>
+            <button onclick="showSection('diet')">Diet</button>
+            <button onclick="showSection('predators')">Known Predators</button>
+            <button onclick="showSection('historical')">Historical Context</button>
+            <button onclick="showSection('connections')">Connections with Humans</button>
+        </div>
+        <div class="content">
+            <div class="top-section">
+                <div class="image-section">
+                    <img src="images/bloodworm.png" alt="Bloodworm Midge Larva" class="bloodworm-image">
+                </div>
+                <div class="info-section">
+                    <h2>Bloodworm Midge Larva</h2>
+                    <p><strong>Scientific Name:</strong> <em>Chironomus plumosus</em></p>
+                    <p><strong>Height:</strong> 1'11"</p>
+                    <p><strong>Weight:</strong> 200.1 lbs</p>
+                    <p><strong>Type:</strong> Normal</p>
+                </div>
+            </div>
+            <div class="description-box">
+                <p id="description-text">Click a section above to learn more!</p>
+            </div>
+            <!-- Transition overlay -->
+            <div class="transition-overlay" id="transition-overlay"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
