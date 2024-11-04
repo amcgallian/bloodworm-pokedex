@@ -14,7 +14,7 @@ body {
     max-width: 600px;
     border: 2px solid #000;
     padding: 20px;
-    background-color: #e63946; /* Red background */
+    background-color: #e63946;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -32,11 +32,11 @@ body {
     color: #fff;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'CustomFont', sans-serif; /* Use custom font */
+    font-family: 'CustomFont', sans-serif;
 }
 
 .content {
-    background: url('images/pokedex-background.jpg') no-repeat center center; /* Image background for inner content */
+    background: url('images/pokedex-background.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px;
     position: relative;
@@ -54,70 +54,65 @@ body {
 
 .image-section {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
 .bloodworm-image {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Description box style with black border and inner red border on all sides */
 .description-box {
     position: relative;
-    border: 2px solid #000; /* Outer black border */
+    border: 2px solid #000;
     padding: 15px;
     margin: 5px 0;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1); /* Pixel-art shadow */
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
     text-align: center;
 }
 
-/* Inner red border for description box */
 .description-box::before {
     content: "";
     position: absolute;
-    top: 0; /* Align red border to touch black border */
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 2px; /* Ensures red touches black with no gaps */
-    border: 2px solid red; /* Inner red border */
-    border-width: 3px 7px; /* Thicker on left/right, thinner on top/bottom */
+    margin: 2px;
+    border: 2px solid red;
+    border-width: 3px 7px;
     border-radius: 6px;
     pointer-events: none;
     box-shadow: 0 0 0 1px red;
 }
 
-/* Info section and section header styles with only top red border */
 .info-section p, .section-header {
     position: relative;
-    border: 2px solid #000; /* Outer black border on all sides */
+    border: 2px solid #000;
     padding: 15px;
     margin: 5px 0;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1); /* Pixel-art shadow */
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
     text-align: center;
 }
 
-/* Red top border only for info-section and section-header */
 .info-section p::before, .section-header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 4px; /* Height of the red line at the top */
-    background-color: red; /* Red color for the top border */
-    border-top-left-radius: 6px; /* Round corners to match container */
+    height: 4px;
+    background-color: red;
+    border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
-/* Transition overlay within content box */
 .transition-overlay {
     position: absolute;
     top: 0;
@@ -126,10 +121,9 @@ body {
     height: 100%;
     background-color: #e63946;
     animation: slideInOut 0.5s ease-in-out forwards;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
-/* Slide-in, then slide-out */
 @keyframes slideInOut {
     0% { transform: translateX(-100%); }
     50% { transform: translateX(0); }
@@ -149,15 +143,14 @@ body {
 .section-description {
     position: relative;
     padding: 15px;
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Shadow effect */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
     text-align: center;
     margin: 10px 0;
-    border: 2px solid #000; /* Outer black border */
+    border: 2px solid #000;
 }
 
-/* Inner red border with thicker left and right sides */
 .section-description::before {
     content: "";
     position: absolute;
@@ -165,16 +158,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 6px; /* Inner rounded corners to align with outer */
-    border: 2px solid red; /* Inner red border */
-
-    /* Thicker red border on the left and right */
+    border-radius: 6px;
+    border: 2px solid red;
     border-left-width: 6px;
     border-right-width: 6px;
-
-    /* Adjust placement to sit just inside black border */
     margin: 2px;
-
     pointer-events: none;
 }
 
@@ -190,11 +178,11 @@ body {
 .type-images {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the images horizontally */
+    justify-content: center;
 }
 
 .macroinvertebrate-image, .detritivore-image {
     width: 150px;
     height: auto;
-    margin: 0px; /* Add 10px margin on both sides */
+    margin: 0px;
 }
