@@ -185,3 +185,15 @@ body {
 body {
     font-family: 'CustomFont', sans-serif;
 }
+
+.type-images {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the images horizontally */
+}
+
+.macroinvertebrate-image, .detritivore-image {
+    width: 150px;
+    height: auto;
+    margin: 0px; /* Add 10px margin on both sides */
+}

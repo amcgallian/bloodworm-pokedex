@@ -19,7 +19,10 @@ function showSection(section) {
                         <p><strong>Scientific Name:</strong> <em>Chironomus plumosus</em></p>
                         <p><strong>Height:</strong> 2 - 20mm</p>
                         <p><strong>Weight:</strong> 1 - 5mg</p>
-                        <p><strong>Type:</strong> Macroinvertebrate - Detritivores</p>
+                        <div class="type-images">
+                            <img src="images/macroinvertebrate.png" alt="Macroinvertebrate" class="macroinvertebrate-image">
+                            <img src="images/detritivore.png" alt="Detritivore" class="detritivore-image">
+                        </div>
                     </div>
                 </div>
                 <div class="description-box">
@@ -28,16 +31,32 @@ function showSection(section) {
                 <div class="transition-overlay" id="transition-overlay"></div>
             `;
         } else {
-            content.innerHTML = `
-                <div class="single-section">
-                    <h2 class="section-header">Bloodworm Midge Larvae</h2>
-                    <img src="${getSectionImage(section)}" alt="Bloodworm Midge Larva" class="section-image">
-                    <div class="section-description">
-                        <p>${getSectionText(section)}</p>
+            const sectionImage = getSectionImage(section); // Get the section-specific image
+            const sectionText = getSectionText(section); // Get the section-specific text
+
+            // Conditional rendering based on the presence of an image
+            if (sectionImage) {
+                content.innerHTML = `
+                    <div class="single-section">
+                        <h2 class="section-header">Bloodworm Midge Larvae</h2>
+                        <img src="${sectionImage}" alt="Bloodworm Midge Larva" class="section-image">
+                        <div class="section-description">
+                            <p>${sectionText}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="transition-overlay" id="transition-overlay"></div>
-            `;
+                    <div class="transition-overlay" id="transition-overlay"></div>
+                `;
+            } else {
+                content.innerHTML = `
+                    <div class="single-section">
+                        <h2 class="section-header">Bloodworm Midge Larvae</h2>
+                        <div class="section-description">
+                            <p>${sectionText}</p>
+                        </div>
+                    </div>
+                    <div class="transition-overlay" id="transition-overlay"></div>
+                `;
+            }
         }
     }, 500); // Match duration with CSS animation time
 }
@@ -72,10 +91,10 @@ function getSectionText(section) {
 function getSectionImage(section) {
     switch (section) {
         case 'habitat': return 'images/habitat.jpg'; // Replace with actual image path
-        case 'diet': return 'images/diet.jpg'; // Replace with actual image path
+        case 'diet': return null; // Replace with actual image path
         case 'predators': return 'images/predators.jpg'; // Replace with actual image path
         case 'historical': return 'images/historical.jpg'; // Replace with actual image path
-        case 'connections': return 'images/connections.jpg'; // Replace with actual image path
+        case 'connections': return null; // Replace with actual image path
         default: return 'images/bloodworm.png'; // Default image if section doesn't match
     }
 }
